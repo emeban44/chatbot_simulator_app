@@ -1,4 +1,4 @@
-import 'package:chatbot_simulator_app/screens/home/widgets/home_app_bar.dart';
+import 'package:chatbot_simulator_app/widgets/_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const HomeAppBar(),
+      appBar: const CustomAppBar(title: 'Conversations'),
       body: BlocProvider(
         create: (context) => HomeCubit()..init(),
         child: BlocBuilder<HomeCubit, HomeState>(

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:chatbot_simulator_app/models/conversation/conversation.dart';
 import 'package:chatbot_simulator_app/network/endpoints.dart';
@@ -24,6 +25,10 @@ class HomeCubit extends Cubit<HomeState> {
         final List<dynamic> data = json.decode(cleanedJson);
         final List<Conversation> conversations = data.map((json) => Conversation.fromJson(json)).toList();
         emit(HomeLoadedState(conversations: conversations));
+      } else {
+        throw HttpException(
+          'fetchConversations failed with status code ${response.statusCode}!',
+        );
       }
     } catch (error) {
       emit(HomeErrorState(errorMessage: error.toString()));

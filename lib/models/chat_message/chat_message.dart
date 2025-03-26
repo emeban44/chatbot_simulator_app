@@ -28,4 +28,8 @@ class ChatMessage {
 
   @JsonKey(name: 'modified_at')
   final int modifiedAt;
+
+  bool get isCurrentUserSender {
+    return sender == 'You';
+  }
 }
