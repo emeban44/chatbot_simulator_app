@@ -15,6 +15,8 @@ class ChatWriteNewMessageField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // This height plays the role of the SafeArea better because the
+      // SafeArea creates too much space on the bottom and it does not look as good.
       height: 75.0,
       decoration: const BoxDecoration(
         color: Colors.white,

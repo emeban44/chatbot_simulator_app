@@ -19,7 +19,7 @@ class ChatMessageTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: message.isCurrentUserSender ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: [
               Text(
                 message.sender,
