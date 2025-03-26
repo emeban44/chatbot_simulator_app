@@ -1,4 +1,5 @@
 import 'package:chatbot_simulator_app/models/chat_message/chat_message.dart';
+import 'package:chatbot_simulator_app/widgets/_widgets.dart';
 import 'package:flutter/material.dart';
 
 class ChatMessageTile extends StatelessWidget {
@@ -27,19 +28,8 @@ class ChatMessageTile extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5.0),
-              Container(
-                decoration: BoxDecoration(
-                  color: message.isCurrentUserSender ? Colors.blueGrey : Colors.grey.shade300,
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  message.lastMessage,
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    color: message.isCurrentUserSender ? Colors.white : Colors.black,
-                  ),
-                ),
+              ChatMessageBubble(
+                message: message,
               ),
             ],
           ),

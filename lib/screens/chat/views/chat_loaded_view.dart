@@ -28,6 +28,7 @@ class _ChatLoadedViewState extends State<ChatLoadedView> {
       if (_focusNode.hasFocus) {
         Future.delayed(const Duration(milliseconds: 300)).then(
           (_) => _scrollController.animateTo(
+            // +20.0 ensures the animation finishes smoothly.
             _scrollController.position.maxScrollExtent + 20.0,
             duration: const Duration(milliseconds: 350),
             curve: Curves.ease,
