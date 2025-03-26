@@ -8,6 +8,19 @@ import 'package:chatbot_simulator_app/utils/json_helper.dart';
 import 'package:http/http.dart' as http;
 
 class ChatRepository {
+  // Private static instance of the repository.
+  static final ChatRepository _instance = ChatRepository._internal();
+
+  // Private constructor.
+  ChatRepository._internal();
+
+  // Factory constructor that returns the single instance, and
+  // ensures that only one instance of ChatRepository is created and shared
+  // throughout the app, saving memory and ensuring consistency.
+  factory ChatRepository() {
+    return _instance;
+  }
+
   Future<List<Conversation>> fetchConversations() async {
     try {
       final response = await http.get(Uri.parse(Endpoints.inbox));
