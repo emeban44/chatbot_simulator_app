@@ -1,7 +1,7 @@
 import 'package:chatbot_simulator_app/models/conversation/conversation.dart';
 import 'package:chatbot_simulator_app/router/custom_router.dart';
 import 'package:chatbot_simulator_app/screens/chat/chat_screen.dart';
-import 'package:chatbot_simulator_app/widgets/conversation_tile.dart';
+import 'package:chatbot_simulator_app/widgets/conversations/conversation_tile.dart';
 import 'package:flutter/material.dart';
 
 class HomeLoadedView extends StatelessWidget {

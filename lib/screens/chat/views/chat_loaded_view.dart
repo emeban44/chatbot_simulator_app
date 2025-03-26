@@ -1,7 +1,7 @@
 import 'package:chatbot_simulator_app/models/chat_message/chat_message.dart';
 import 'package:chatbot_simulator_app/screens/chat/cubit/chat_cubit.dart';
-import 'package:chatbot_simulator_app/widgets/chat_messages_sliver_list.dart';
-import 'package:chatbot_simulator_app/widgets/chat_write_new_message_field.dart';
+import 'package:chatbot_simulator_app/widgets/chats/chat_messages_sliver_list.dart';
+import 'package:chatbot_simulator_app/widgets/chats/chat_write_new_message_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
