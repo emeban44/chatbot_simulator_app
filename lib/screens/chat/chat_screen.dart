@@ -1,5 +1,5 @@
 import 'package:chatbot_simulator_app/router/custom_router.dart';
-import 'package:chatbot_simulator_app/widgets/app_bar/custom_app_bar.dart';
+import 'package:chatbot_simulator_app/widgets/_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,9 +42,9 @@ class ChatScreen extends StatelessWidget {
                     chatMessages: state.chatMessages,
                   );
                 case ChatLoadingState():
-                  return const ChatLoadingView();
+                  return const CommonLoadingView();
                 case ChatErrorState():
-                  return ChatErrorView(
+                  return CommonErrorView(
                     errorMessage: state.errorMessage,
                   );
               }

@@ -22,9 +22,9 @@ class HomeScreen extends StatelessWidget {
                   conversations: state.conversations,
                 );
               case HomeLoadingState():
-                return const HomeLoadingView();
+                return const CommonLoadingView();
               case HomeErrorState():
-                return HomeErrorView(
+                return CommonErrorView(
                   errorMessage: state.errorMessage,
                 );
             }
